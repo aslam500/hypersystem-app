@@ -3,7 +3,7 @@ import "../style/main.css"
 import Moment from 'react-moment';
 import Cookies from "js-cookie"
 import axios from "axios";
-import Modal from "./Modal";
+import Logout from "./Logout";
 export default function Message(){
   const [data,setData]=useState([])
   const [user,setUser]=useState([])
@@ -96,7 +96,11 @@ export default function Message(){
   console.log(userId)
     return(
         <div class="container">
-<h3 class=" text-center">Messaging</h3>
+        
+        <div className="logout d-flex justify-content-between" >
+          <h3 class=" text-center">Messaging</h3>
+          <Logout/>
+        </div>
 <div class="messaging">
       <div class="inbox_msg">
         <div class="inbox_people">

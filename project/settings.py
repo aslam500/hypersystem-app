@@ -39,7 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'chat',
-    'webpack_loader'
+    'webpack_loader',
+    'drf_yasg'
+
 ]
 
 

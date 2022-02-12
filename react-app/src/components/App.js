@@ -12,8 +12,8 @@ export default function App(){
         <div className="main">
             <Router>
                 <Routes>
-                    {/* <Route path=''  element={<Login/>}/> */}
-                    <Route path="/" element={<Message/>}/>
+                    <Route path=''  element={<Login/>}/>
+                    <Route path="/chat" element={<Message/>}/>
                 </Routes>
                 
                 

@@ -16,6 +16,14 @@ from .models import Employee
 
 
 # Create your views here.
+class signout(APIView):
+    authentication_classes=(TokenAuthentication,SessionAuthentication,)
+    permission_classes=(IsAuthenticated,)
+ 
+    def post(self,request,*args,**kwargs):
+        print(request.user)
+        logout(request)
+        return Response({'status':'loggedout','status_code':200})
 class UserLogin(APIView):
     
 
