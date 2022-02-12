@@ -7,3 +7,9 @@ class ListViewSerializer(serializers.ModelSerializer):
     class Meta:
         model=Chat
         fields="__all__"
+
+class EmployeeSerializer(serializers.ModelSerializer):
+    user= serializers.StringRelatedField()
+    class Meta:
+        model=Employee
+        fields="__all__"

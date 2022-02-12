@@ -17,8 +17,10 @@ from django.contrib import admin
 from django.urls import path,include
 from rest_framework.authtoken import views as rest_auth
 from chat.views import UserLogin
+from .views import index
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path("",index,name="index"),
     path('api-auth/', rest_auth.obtain_auth_token),
     path('login/',UserLogin.as_view(),name='login'),
     path('chat/',include('chat.urls'))
